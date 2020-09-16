@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -26,7 +27,10 @@ export const RowCenter = styled.div`
     justify-content: center;
 `;
 
-export const PokemonCard = styled.div`
+export const PokemonCard = styled(Link)`
+    display: block;
+    text-decoration: none;
+    color: #999;
     background: #fff;
     width: 100%;
     max-width: 200px;
@@ -42,6 +46,25 @@ export const PokemonCard = styled.div`
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
         border: 1px solid rgba("#283D97", 0.75);
     }
+    &:hover,
+    &:visited,
+    &:active {
+        color: #666;
+    }
+`;
+
+export const SingleCard = styled.div`
+    display: block;
+    text-decoration: none;
+    color: #999;
+    background: #fff;
+    width: 100%;
+    max-width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    border: 1px solid #fff;
+    margin: 16px auto;
+    padding: 32px;
+    border-radius: 16px;
 `;
 
 export const Input = styled.input`
@@ -68,4 +91,19 @@ export const Button = styled.button`
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
         border: 1px solid rgba("#283D97", 0.75);
     }
+`;
+
+export const Label = styled.p`
+    display: block;
+`;
+
+export const Badge = styled.span`
+    font-size: 0.75em;
+    background: #283d97;
+    color: #fff;
+    padding: 3px 5px;
+    margin: 2px;
+    white-space: pre;
+    display: inline-block;
+    border-radius: 2px;
 `;

@@ -26,6 +26,7 @@ const getSinglePokemonFromPokeAPI = async (name) => {
         name,
         url,
         ...getPokemonImage(url),
+        res,
     }));
     return data;
 };
